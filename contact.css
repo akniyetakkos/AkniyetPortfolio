@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    background-color: black;
+  }
+  
+  .menu-link {
+    position: relative;
+    color: #f2f2f2;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    margin: 0 30px;
+    transition: all 0.3s ease;
+  }
+  
+  .menu-link:hover {
+    color: #b6ffb0;
+    text-shadow: 0 0 5px #b6ffb0, 0 0 10px #b6ffb0, 0 0 20px #b6ffb0;
+  }
+  
+  .menu-link::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #b6ffb0;
+    box-shadow: 0 0 5px #b6ffb0, 0 0 10px #b6ffb0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .menu-link:hover::after {
+    opacity: 1;
+  }
+  navbar {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .nav-links a {
+    color: white;
+    margin: 0 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+  }
+  
+  .logo-top-right {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    height: 60px;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+  }
+  .puzzle-cube{
+    width: 500px;
+  }
+  .with-me {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border: none;
+    border-radius: 15x;
+  }
+  
+  .text-who {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .make {
+    font-size: 72px;
+    margin-bottom: 20px;
+  }
+  
+  .kosmos {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    gap: 70px;
+  }
+  
+  .text-kosmos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .with-me {
+    margin-top: 30px;
+    width: 130px;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  footer {
+    background-color: black;
+    color: white;
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 80px;
+  }
+  .social-icons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .social-icons a {
+    color: rgb(255, 255, 255);
+    font-size: 32px;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #a6a6a6; 
+    transform: scale(1.2);
+  }
+  @media screen and (max-width: 768px) {
+    .menu-container {
+        padding: 20px;
+    }
+  
+    .menu-link {
+        margin: 0 10px;
+        font-size: 16px;
+    }
+  
+    .logo-top-right {
+        top: 10px;
+        right: 10px;
+        height: 50px;
+    }
+  
+  .another {
+      text-align: center;
+      margin-bottom: 20px;
+  }
+    .kosmos {
+      flex-direction: column;
+      padding: 20px;
+      gap: 20px;
+    }
+  
+    .puzzle-cube {
+      width: 300px;
+      margin-bottom: 20px;
+    }
+  
+    .text-kosmos {
+      text-align: center; 
+    }
+  
+    .make {
+      font-size: 48px;
+    }
+  
+    footer {
+      padding-top: 80px;
+      padding-bottom: 40px;
+    }
+  
+    .social-icons {
+      gap: 20px;
+    }
+  
+    .social-icons a {
+      font-size: 28px;
+    }
+  
+    .with-me {
+      width: 200px;
+      padding: 15px;
+      margin: 20px auto;
+    }
+  
+    footer h1 {
+      text-align: center;
+        font-size: 18px;
+    }
+  }
+
+
+
+  @media screen and (max-width: 480px) {
+    .menu-link {
+        font-size: 14px;
+        margin: 0 5px;
+    }
+  
+    .logo-top-right {
+        height: 40px;
+    }
+  }

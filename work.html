@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="work.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <div class="header">
+    
+    <div class="menu-container">
+    <div class="another">  <a href="about.html" class="menu-link">ABOUT</a>
+      <a href="work.html" class="menu-link" style="color: #b6ffb0;">WORK</a>
+ 
+      <a href="contact.html" class="menu-link">CONTACT</a>
+      <a href="skills.html" class="menu-link">SKILLS</a></div>
+
+<a href="index.html">  <img src="images/hero-t-spaceman.png" alt="T Logo" class="logo-top-right" id="logo" />
+</a>
+  <main style="height: 50px; background: #111;"></main>
+
+  <script>
+    const logo = document.getElementById("logo");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        logo.style.opacity = "0";
+        logo.style.pointerEvents = "none";
+      } else {
+        logo.style.opacity = "1";
+        logo.style.pointerEvents = "auto";
+      }
+    });
+  </script>   
+   </div>
+  </div>
+    <div class="works">
+        <h1>SELECTED WORKS</h1>
+    
+        <div class="grid">
+          <div class="div-1"><img class="img-1" src="./images/project-1-01.png" alt=""></div>
+          <div class="div-2"><img class="img-1" src="./images/project-2-01.png" alt=""></div>
+          <div class="div-3"><img class="img-1" src="./images/project-3.1-01.png" alt=""></div>
+          <div class="div-4"><img class="img-1" src="./images/Untitled-1-01.png" alt=""></div>
+          <div class="div-5"><img class="img-1" src="./images/Untitled-5-01.png" alt=""></div>
+          <div class="div-6"><img class="img-1" src="./images/1.PNG" alt=""></div>
+        </div>
+<a href="./work.html">   <button class="more">MORE WORK</button></a>
+      </div>
+      <div class="grid-2">
+        <div class="first-d"><img class="img-1" src="./images/akni2.jpg" alt=""></div>
+        <div class="second-d"><img class="img-1" src="./images/5370811352328825444 (1).jpg" alt=""></div>
+        <div class="thrrid-d"><img class="img-1" src="./images/qoryq.png" alt=""></div>
+      </div>
+      <footer>
+        <h1>Walk forward, for the horizon holds more than you can see</h1>
+        <p>
+          The Dark Tower Stephen King
+    
+        </p>
+        <span id="year"></span> ©Akkos Akniyet. All rights reserved.
+        <p>
+          info@akkos_akniyet</p>
+          <div class="social-icons">
+            <a href="https://github.com/akniyetakkos" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://instagram.com/akkkni" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://t.me/temirbekovna_a" target="_blank"><i class="fab fa-telegram"></i></a>
+          </div>
+      </footer>
+      <script>
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+              target.scrollIntoView({ behavior: "smooth" });
+            }
+          });
+        });
+        
+        // Fade-in effect on scroll
+        const fadeElements = document.querySelectorAll('.img-1, .works, .grid-2, footer, h1, p');
+        
+        const appearOnScroll = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = 1;
+              entry.target.style.transform = "translateY(0)";
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.2
+        });
+        
+        fadeElements.forEach(el => {
+          el.style.opacity = 0;
+          el.style.transform = "translateY(30px)";
+          el.style.transition = "opacity 0.8s ease, transform 0.8s ease";
+          appearOnScroll.observe(el);
+        });
+        
+        // Animate "MORE WORK" button on hover
+        const moreBtn = document.querySelector(".more");
+        if (moreBtn) {
+          moreBtn.addEventListener("mouseenter", () => {
+            moreBtn.style.boxShadow = "0 0 15px #b6ffb0";
+            moreBtn.style.transform = "scale(1.05)";
+            moreBtn.style.transition = "all 0.3s ease";
+          });
+          moreBtn.addEventListener("mouseleave", () => {
+            moreBtn.style.boxShadow = "none";
+            moreBtn.style.transform = "scale(1)";
+          });
+        }
+        
+        // Dynamic copyright year
+        document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
+</body>
+</html>

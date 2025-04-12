@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <div class="header">
+    
+    <div class="menu-container">
+    <div class="another">  <a href="about.html" class="menu-link">ABOUT</a>
+      <a href="work.html" class="menu-link">WORK</a>
+ 
+      <a href="contact.html" class="menu-link" style="color: #b6ffb0;">CONTACT</a>
+      <a href="skills.html" class="menu-link">SKILLS</a></div>
+
+<a href="index.html">  <img src="images/hero-t-spaceman.png" alt="T Logo" class="logo-top-right" id="logo" />
+</a>
+  <main style="height: 50px; background: #111;"></main>
+
+  <script>
+    const logo = document.getElementById("logo");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        logo.style.opacity = "0";
+        logo.style.pointerEvents = "none";
+      } else {
+        logo.style.opacity = "1";
+        logo.style.pointerEvents = "auto";
+      }
+    });
+  </script>   
+   </div>
+      <div class="kosmos">
+        <img class="puzzle-cube" src="./images/make-contact-resized.png" alt="">
+        <div class="text-kosmos">
+          <h1 class="make">Make Contact</h1>
+          <p>Got a project in mind? Contact me for a free quote, and let’s bring your ideas to life!
+    
+          </p>
+          <button class="with-me" onclick="location.href='mailto:akniyetakkos@gmail.com'">Work with me</button>
+
+        </div>
+      </div>
+      <footer>
+        <h1>Walk forward, for the horizon holds more than you can see</h1>
+        <p>
+          The Dark Tower Stephen King
+    
+        </p>
+        <span id="year"></span> ©Akkos Akniyet. All rights reserved.
+        <p>
+          info@akkos_akniyet</p>
+          <div class="social-icons">
+            <a href="https://github.com/akniyetakkos" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://instagram.com/akkkni" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://t.me/temirbekovna_a" target="_blank"><i class="fab fa-telegram"></i></a>
+          </div>
+      </footer>
+</body>
+</html>
